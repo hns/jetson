@@ -13,7 +13,7 @@ var {Parser} = require("jetson");
 var client = new Client(100000000); // need a way to disable timeout
 var parser = new Parser(function(tweet) {
     if (tweet.user) {
-        writeln(BOLD, RED, tweet.user.name + ":", GREEN, tweet.text);
+        writeln(BOLD, BLUE, tweet.user.name + ":", GREEN, tweet.text);
     } 
 });
 
@@ -21,7 +21,7 @@ client.request({
     url: "http://stream.twitter.com/1/statuses/filter.json",
     username: username,
     password: password,
-    data: {track: system.args[1]},
+    data: {track: system.args[1] || "♥"},
     part: function(content, status, contentType, exchange) {
         parser.write(content);
     },
