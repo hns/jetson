@@ -1,0 +1,10 @@
+{
+    "name": "jetson",
+    "version": "0.1.0",
+    "description": "A streaming JSON parser based on Jackson",
+    "keywords": ["rhino", "json", "streaming"],
+    "author": "Hannes Wallnöfer (http://henso.com/) <hannes@helma.at>",
+    "jars": [
+        "jars/jackson-core-asl-1.5.0.jar"
+    ]
+}
